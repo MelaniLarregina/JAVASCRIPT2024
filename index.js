@@ -31,14 +31,6 @@ class Personas{
 
    mayor_de_edad (edad){
       edad >= 18 ? alert ("Correcto, es mayor de edad") : alert("Error, no es mayor de edad");
-      /*if( edad >=18 ){
-         alert ("Correcto, es mayor de edad");
-         return true;
-      }
-      else {
-         alert ("Error, no es mayor de edad");
-         return false;
-      }*/
    }
 }
 
@@ -83,7 +75,7 @@ while(seguir === 's'){
    let persona = new Personas(nombre,dni,edad);
    alert(persona.darBienvenida() + " " + persona.get_nombre());
 
-   if(persona.mayor_de_edad(edad)){
+   if(persona =>18(edad)){
       let monto = prompt ("Ingresa cuanto dinero quieres solicitar:  ");
       monto = parseInt (monto);
 
@@ -117,7 +109,7 @@ const card1 = document.querySelector ("div.card1#cards1");
 
 function CreandoCardDom1(){
     return `<div id="cards1" class="card1">
-    <img class="card-img-top4" src="./imagenes/dolares.jpeg">
+    <img class="card-img-top4" src="./imagenes/pressssstamo.webp">
     <div class="card-body1">
     <h2 class="card-title1">Prestamos inmediatos</h2>
     <p class="card-text1">Confianza y rapidez, <strong>solicitalo en 6 cuotas!!</strong></p>
@@ -129,7 +121,7 @@ const card2 = document.querySelector ("div.card2#cards2");
 
 function CreandoCardDom2(){
     return `<div id="cards2" class="card2">
-    <img class="card-img-top2" src= "./images/prestamo_personal.jpg_242310155.webp" alt="imagen de celulares haciendo una transferencia bancaria">
+    <img class="card-img-top2" src= "./imagenes/prestamo_personal.jpg_242310155.webp" alt="imagen de celulares haciendo una transferencia bancaria">
     <div class="card-body2">
     <h2 class="card-title2">Prestamos inmediatos</h2>
     <p class="card-text2">Cpnfianza y rapidez, <strong>solicitalo en 9 cuotas!!</strong></p>
@@ -141,7 +133,7 @@ const card3 = document.querySelector ("div.card3#cards3");
 
 function CreandoCardDom3(){
     return `<div id="cards3" class="card3">
-    <img class="card-img-top3" src="./images/dolares3.jpg" alt="imagen de celulares haciendo una transferencia bancaria">
+    <img class="card-img-top3" src="./imagenes/dinero_card.jpg" alt="imagen de celulares haciendo una transferencia bancaria">
     <div class="card-body3">
     <h2 class="card-title3">Prestamos inmediatos</h2>
     <p class="card-text3">Cpnfianza y rapidez, <strong>solicitalo en 12 cuotas!!</strong></p>
@@ -154,7 +146,7 @@ const card4 = document.querySelector ("div.card4#cards4");
 function CreandoCardDom4(){
     return `
     <div id="cards4" class="card4">
-    <img class="card-img-top4" src= "./images/pressssstamo.webp" alt="imagen de celulares haciendo una transferencia bancaria">
+    <img class="card-img-top4" src= "./imagenes/transferencia.jpg" alt="imagen de celulares haciendo una transferencia bancaria">
     <div class="card-body4">
     <h2 class="card-title4">Prestamos inmediatos</h2>
     <p class="card-text4">Cpnfianza y rapidez, <strong>solicitalo en 24 cuotas!!</strong></p>
@@ -163,19 +155,21 @@ function CreandoCardDom4(){
 
 card4.innerHTML = CreandoCardDom4(); 
 
-const clock = document.getElementById ("clock");
-
-clock.addEventListener('click', function(){ alert ('listo! enviamos tu información, revisa tu correo electronico')});
-
-const complet = document.getElementById ("complet");
+const complet = document.getElementById("complet");
 
 complet.onkeydown = ()=>{
-   console.log("presiono una tecla");};
+   console.log('presiono una tecla')
+},
+complet.onkeyup = ()=>{
+   console.log('solto una tecla');
+};
 
 const com = document.getElementById("com");
+com.onkeyup = ()=>{console.log('solto una tecla')};
 
-com.onkeyup = ()=>{
-   console.log("solto una tecla")};
+const btn = document.getElementById("btn");
+btn.addEventListener('click', function(){ alert('listo! enviamos tu información, revisa tu correo electronico')});
+
 
 const productos = [
    {id:1, nombre: "opcion1", precio: 6},
