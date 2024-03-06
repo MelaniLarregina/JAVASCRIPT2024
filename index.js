@@ -197,7 +197,7 @@ function renderizarProducto(){
 
 
 function agregarAlCarrito(idProducto){
-   const itemExistente = elementosCarrito.find(item => item.id === idProducto). JSON.parse(localStorage.getItem('itemExistente')) || [];
+   const itemExistente = elementosCarrito.find(item => item.id === idProducto)
    if(itemExistente){
       itemExistente.cantidad++
    }else {
@@ -251,3 +251,6 @@ contenedorProductos.addEventListener('click', function(evento){
 
 renderizarProducto()
 
+function guardarCarritoEnLocalStorage(carrito) {
+   localStorage.setItem('carrito', JSON.stringify(carrito));
+}
